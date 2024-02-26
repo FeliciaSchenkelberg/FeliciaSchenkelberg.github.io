@@ -5,6 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -46,7 +48,7 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>Welcome, all!</p>
 								<p>Ms. Schenkelberg is a cybersecurity consultant offering cybersecurity assessments, social engineering tests, pen-testing, vulnerability scanning, and in-depth strategic analysis based in Cleveland, Ohio. With working experience coordinating and administering the maintenance of security-related control systems, including anti-virus, firewalls, intrusion prevention systems, and secure web gateway. Ms. Schenkelberg has experience addressing both sides of organizational cybersecurity.</p>
 								<p>The protection of corporate networks, equipment, and data while ensuring confidentiality, integrity, and availability of information is vital. With her extensive knowledge of incident response procedures and processes. She will help your organization design, deploy, monitor, and maintain devices, systems, applications, interconnections, and protocols for security, performance, inventory, compliance, logging, and alerting capabilities. All while ensuring the availability of systems for ongoing business operations.</p>
@@ -89,7 +91,7 @@
 										<li><a href="https://portswigger.net/burp">Burpsuite</a>.</li>
 									</ul>
 								</p>
-								<video width="100%" controls><source src="images/vid02.mp4" type="video/mp4"></video>
+								<video width="100%" controls><source src="images/vid01.mp4" type="video/mp4"></video>
 							</article>
 
 						<!-- About -->
@@ -102,32 +104,33 @@
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
+						<article id="contact">
+							<h2 class="major">Contact</h2>
+							<form onsubmit="sendEmail(); return false;">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" required />
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="https://github.com/FeliciaSchenkelberg" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" required />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4" required></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
 								</ul>
-							</article>
+							</form>
+							<ul class="icons">
+								<li><a href="https://github.com/fschenkelberg/" class="icon brands fa-github"></a></li>
+								<li><a href="https://lisplab.host.dartmouth.edu/author/felicia-schenkelberg/" class="fas fa-briefcase"></a></li>
+							</ul>
+						</article>
 
 					</div>
 
@@ -147,6 +150,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/emailer.js"></script>
 
 	</body>
 </html>
